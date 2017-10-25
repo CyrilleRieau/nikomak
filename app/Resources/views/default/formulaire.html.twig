@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+{{ form_start(form, {'attr' : {'class': 'form-inline'}})}}
+
+<div class="form-group">
+{{ form_label(form.date) }}
+{{ form_widget(form.date) }}
+</div>
+<div class="form-group">
+{{ form_label(form.emitter) }}
+{{ form_widget(form.emitter) }}
+</div>
+<div class="form-group">
+{{ form_label(form.receiver) }}
+{{ form_widget(form.receiver) }}
+</div>
+<div class="form-group">
+{{ form_label(form.why) }}
+{{ form_widget(form.why) }}
+</div>
+<div class="form-group">
+{{ form_row(form.file) }}
+{{ form_end(form) }}
+</div>
+{% endblock %}

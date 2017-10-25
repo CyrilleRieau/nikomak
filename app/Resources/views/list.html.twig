@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<table>
+<thead>
+<tr>
+<th>Emetteur</th>
+<th>Receveur</th>
+<th>Pourquoi</th>
+<th>Date</th>
+</thead>
+{% for thank in thanks %}
+<tr>
+                <td>{{ thank.id }}</td>
+                <td>{{ thank.date|date('Y-m-d H:i:s') }}</td>
+                <td>{{ thank.emitter }}</td>
+                <td>{{ thank.receiver }}</td>
+                <td>{{thank.why}}</td>
+                <tr>
+    </table>
+{% endblock %}
